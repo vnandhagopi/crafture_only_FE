@@ -1,0 +1,199 @@
+.main{
+    width: 100%;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-1{
+    width: 45%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.sec-card-1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-1 h1{
+    font-size: 75px;
+    font-weight: 500;
+}
+
+.section-1 p{
+    color: #acacac;
+}
+
+.arrow-icon {
+    width: fit-content;
+    padding: 25px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+.arrow-icon i{
+    font-size: 20px;
+}
+
+.section-2{
+    width: 45%;
+    display: flex;
+}
+
+.section-2 img{
+    width: 600px;
+    border-radius: 5px;
+}
+
+.gallery{
+    display: flex;
+}
+
+.gallery div{
+    margin: 50px 0;
+    width: 25%;
+    height: 400px;
+}
+
+.gallery div img{
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe .subscribe-wrapper {
+    width: 95%;
+    position: relative;
+    z-index: 0;
+}
+
+.subscribe-wrapper {
+    width: 95%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.subscribe-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.subscribe-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+}
+
+.subscribe-content {
+    z-index: 1;  
+}
+
+.subscribe-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.subscribe-content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.subscribe-content button {
+    background: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.subscribe-content button:hover {
+    background: #f0f0f0;
+}
+
+@media  screen and (max-width: 800px) {
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 20px;
+    }
+
+    .section-1{
+        padding: 10px;
+        gap: 25px;
+        width: 75%;
+    }
+
+    .section-1 h1{
+        font-size: 43px;
+    }
+
+    .arrow-icon {
+        display: none;
+    }
+
+    .section-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-2 img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .gallery{
+        margin: 50px 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .gallery div{
+        margin: 0;
+        width: 100%;
+        height: 400px;
+    }
+
+    .gallery div img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .subscribe{
+        display: none;
+    }
+}
