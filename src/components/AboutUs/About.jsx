@@ -7,8 +7,12 @@ import OurMissions from "./OurMissions";
 import OurVisions from "./OurVisions";
 import OurHistory from "./OurHistory";
 import AboutWork from "./AboutWork";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Fragment>
       <Navbar activePath={{ path: "/aboutus" }} />

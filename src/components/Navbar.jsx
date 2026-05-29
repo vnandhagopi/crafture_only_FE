@@ -22,7 +22,7 @@ const Navbar = (props) => {
             </div>
             <div className="nav-sec2">
                 <p onClick={ () => handleNavigate('/') } style={{color: props.activePath.path === "/" ? "black" : ''}}>Home</p>
-                <p onClick={ () => handleNavigate('/products') } style={{color: props.activePath.path === "/products" ? "black" : ''}} >Products</p>
+                <p onClick={ () => handleNavigate('/catalog') } style={{color: props.activePath.path === "/catalog" ? "black" : ''}} >Catalog</p>
                 <p onClick={ () => handleNavigate('/aboutus') } style={{color: props.activePath.path === "/aboutus" ? "black" : ''}}>About</p>
                 <p onClick={ () => handleNavigate('/contactus') } style={{color: props.activePath.path === "/contactus" ? "black" : ''}}>Contact Us</p>
             </div>

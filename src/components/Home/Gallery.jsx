@@ -3,8 +3,9 @@ import img1 from "../../assets/images/gallery (1).jpg";
 import img2 from "../../assets/images/gallery (2).jpg";
 import img3 from "../../assets/images/gallery (3).jpg";
 import img4 from "../../assets/images/gallery (4).jpg";
-import cover from "../../assets/images/cover.jpg";
+// import cover from "../../assets/images/cover.jpg";
 import "../../styles/home.css";
+import Category from "./Category";
 
 const Gallery = () => {
   return (
@@ -23,7 +24,10 @@ const Gallery = () => {
           <img src={img4} alt="img4" />
         </div>
       </main>
-      <section className="subscribe">
+
+      <Category />
+
+      {/* <section className="subscribe">
         <div className="subscribe-wrapper">
           <img src={cover} alt="cover" />
           <div className="subscribe-content">
@@ -31,7 +35,7 @@ const Gallery = () => {
             <button>Subscribe</button>
           </div>
         </div>
-      </section>
+      </section> */}
     </Fragment>
   );
 };

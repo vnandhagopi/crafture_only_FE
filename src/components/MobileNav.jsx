@@ -11,8 +11,8 @@ const MobileNav = (props) => {
       path: "/",
     },
     {
-      title: "PRODUCTS",
-      path: "/products",
+      title: "Catalog",
+      path: "/catalog",
     },
     {
       title: "ABOUT",
