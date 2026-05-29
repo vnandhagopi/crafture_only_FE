@@ -20,7 +20,7 @@ const SectionBanner = () => {
           </div>
         </div>
         <div className="section-2">
-            <img src={banner} alt="banner"></img>
+            <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=90&w=1600&h=1800&auto=format&fit=crop" alt="banner"></img>
         </div>
       </main>
     </Fragment>

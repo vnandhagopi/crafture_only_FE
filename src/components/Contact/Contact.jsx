@@ -330,7 +330,7 @@ const Products = () => {
                   fontWeight: "bold",
                   cursor: "pointer",
                   display: "flex",
-                  alignItems: "end",
+                  alignItems: "center",
                   gap: "10px",
                   borderRadius: "50px",
                   backgroundColor: "black",

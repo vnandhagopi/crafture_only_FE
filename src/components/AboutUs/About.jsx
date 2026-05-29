@@ -8,6 +8,7 @@ import OurVisions from "./OurVisions";
 import OurHistory from "./OurHistory";
 import AboutWork from "./AboutWork";
 import { useEffect } from "react";
+import "../../styles/about.css"
 
 const About = () => {
   useEffect(() => {

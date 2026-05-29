@@ -45,7 +45,7 @@ const OurMissions = () => {
             gap: "25px",
           }}
         >
-          <h1>Our Mission</h1>
+          <h1 className="text-4xl font-semibold">Our Mission</h1>
           <p style={{ color: "rgb(55, 55, 55)", fontSize: "16px" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad unde at
             doloremque a vel incidunt nulla minima eaque quidem. Rerum laborum

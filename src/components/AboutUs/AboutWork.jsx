@@ -24,7 +24,7 @@ const AboutWork = () => {
             gap: "25px",
           }}
         >
-          <h1>How We do Work</h1>
+          <h1 className="text-4xl font-semibold" >How We do Work</h1>
           <p style={{ color: "rgb(55, 55, 55)" }}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
             veritatis expedita possimus quae, fugiat impedit laborum placeat
