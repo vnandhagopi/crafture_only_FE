@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import "../../styles/home.css"
-import banner from "../../assets/images/banner.jpg"
+// import banner from "../../assets/images/banner.jpg"
 
 const SectionBanner = () => {
   return (
