@@ -14,7 +14,7 @@ const Products = () => {
   const [phone, setPhone] = useState("");
   const [product, setProduct] = useState("");
   const [message, setMessage] = useState("");
-  const [clickableProduct, setClickableProduct] = useState(true)
+  const [clickableProduct, setClickableProduct] = useState(true);
 
   const [errors, setErrors] = useState({});
 
@@ -24,10 +24,12 @@ const Products = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(()=> {
-    setProduct(location.state.id)
-    setClickableProduct(false)
-  }, [location.state])
+  useEffect(() => {
+    if (location.state?.id) {
+      setProduct(location.state.id);
+      setClickableProduct(false);
+    }
+  }, [location.state]);
 
   const validateForm = () => {
     let newErrors = {};
