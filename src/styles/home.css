@@ -151,13 +151,17 @@
     }
 
     .section-1{
-        padding: 10px;
+        padding: 0;
         gap: 25px;
-        width: 75%;
+        width: 100%;
+    }
+
+    .section-1 p{
+        text-align: justify;
     }
 
     .section-1 h1{
-        font-size: 43px;
+        font-size: 36px;
     }
 
     .arrow-icon {

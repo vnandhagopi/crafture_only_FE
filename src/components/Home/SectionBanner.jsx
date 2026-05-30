@@ -8,7 +8,7 @@ const SectionBanner = () => {
       <main className="banner">
         <div className="section-1">
           <div className="sec-card-1">
-            <h1>Transform Your Space with Timeless Furniture</h1>
+            <h1 >Transform Your Space with Timeless Furniture</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, sit architecto recusandae reiciendis at fugit sapiente rerum rem pariatur exercitationem
             </p>

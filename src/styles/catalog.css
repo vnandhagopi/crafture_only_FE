@@ -1,3 +1,9 @@
 .catagory-options:hover {
-    text-decoration: underline;
+    border: 1px solid black;
+}
+
+.catagory-options {
+    border: 1px solid #9d9d9d;
+    min-width: 50px;
+    text-align: center;
 }

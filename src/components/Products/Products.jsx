@@ -5,13 +5,18 @@ import { categories } from "../../DB/categories";
 import { products } from "../../DB/products";
 import "../../styles/catalog.css";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [currentCategory, setCurrentCategory] = useState("all");
   const [catalog, setCatalog] = useState(products);
+  const Navigate = useNavigate();
 
   const location = useLocation();
+
+  const NavigateContact = (id) => {
+    Navigate("/contactus", { state: { id } });
+  };
 
   useEffect(() => {
     if (location.state?.id) {
@@ -52,11 +57,11 @@ const Products = () => {
       <Navbar activePath={{ path: "/catalog" }} />
       <main className="my-6 mx-4 sm:mx-6 md:mx-10 lg:mx-20 xl:mx-24">
         <section
+          className="m-0 sm:my-[50px]"
           style={{
             display: "flex",
             flexDirection: "column",
             gap: "30px",
-            margin: "50px 0",
           }}
         >
           <div
@@ -67,26 +72,27 @@ const Products = () => {
               gap: "25px",
             }}
           >
-            <h1 style={{ fontWeight: "400", fontSize: "48px" }}>Catalog</h1>
+            <h1 className="sm:text-[48px] text-2xl">Catalog</h1>
             <div
               style={{
                 display: "flex",
-                alignItems: "end",
                 gap: "10px",
                 cursor: "pointer",
               }}
-            >
-              <p>Sort by</p>
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            ></div>
           </div>
-          <div style={{ display: "flex", gap: "20px" }}>
+          <div className="flex-wrap" style={{ display: "flex", gap: "10px" }}>
             <p
               className="catagory-options"
               onClick={() => handleCurrentCategory("all")}
               style={{
                 cursor: "pointer",
-                textDecoration: currentCategory === "all" ? "underline" : "",
+                border:
+                  currentCategory === "all"
+                    ? "1px solid black"
+                    : "",
+                padding: "10px",
+                borderRadius: "50px",
               }}
             >
               All
@@ -98,8 +104,12 @@ const Products = () => {
                   className="catagory-options"
                   style={{
                     cursor: "pointer",
-                    textDecoration:
-                      currentCategory === data.id ? "underline" : "",
+                    border:
+                      currentCategory === data.id
+                        ? "1px solid black"
+                        : "",
+                    padding: "10px",
+                    borderRadius: "50px",
                   }}
                   key={data.id}
                 >
@@ -117,10 +127,10 @@ const Products = () => {
                 return (
                   <div
                     style={{
-                      width: "350px",
-                      margin: "25px 0",
+                      maxWidth: "400px",
+                      margin: "10px 0",
+                      flexBasis: "350px",
                       flexGrow: "1",
-                      maxWidth: "30%",
                     }}
                   >
                     <div style={{ width: "100%", height: "300px" }}>
@@ -132,6 +142,7 @@ const Products = () => {
                     </div>
                     <div
                       style={{
+                        width: "100%",
                         padding: "20px 0",
                         display: "flex",
                         alignItems: "center",
@@ -151,6 +162,7 @@ const Products = () => {
                         </h3>
                       </div>
                       <div
+                        onClick={() => NavigateContact(product.id)}
                         style={{
                           display: "flex",
                           alignItems: "center",

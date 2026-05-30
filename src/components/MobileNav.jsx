@@ -61,8 +61,8 @@ const MobileNav = (props) => {
             padding: "18px",
           }}
         >
-          <div style={{ fontSize: "14px" }}>
-            <h1>CRAFTURE</h1>
+          <div>
+            <h1 style={{ fontSize: "18px" }}>CRAFTURE</h1>
             {/* <img src="" alt="logo"></img> */}
           </div>
           <div
@@ -75,7 +75,7 @@ const MobileNav = (props) => {
             }}
             onClick={() => setSideNav(false)}
           >
-            <i style={{ fontSize: "24px" }} class="fa-solid fa-x"></i>
+            <i style={{ fontSize: "20px" }} class="fa-solid fa-x"></i>
           </div>
         </section>
         <section style={{ padding: "18px" }}>

@@ -2,6 +2,7 @@ import { Fragment } from "react/jsx-runtime";
 import { categories } from "../../DB/categories";
 import { products } from "../../DB/products";
 import { useNavigate } from "react-router-dom";
+import "../../styles/category.css";
 
 const NewlyAdded = () => {
   const Navigate = useNavigate();
@@ -21,16 +22,16 @@ const NewlyAdded = () => {
   });
 
   const NavigateContact = (id) => {
-    Navigate("/contactus", { state: { id } })
-  }
+    Navigate("/contactus", { state: { id } });
+  };
 
   const NavigateCatalog = () => {
-    Navigate("/catalog")
-  }
+    Navigate("/catalog");
+  };
 
   return (
     <Fragment>
-      <main style={{ margin: "100px 50px" }}>
+      <main className="newly-added-main">
         <section
           style={{
             display: "flex",
@@ -38,13 +39,13 @@ const NewlyAdded = () => {
             alignItems: "end",
           }}
         >
-          <div style={{ width: "30%" }}>
+          <div className="heading">
             <p style={{ marginBottom: "10px", color: "#a0a0a0" }}>
               Featured Furniture
             </p>
-            <h2 style={{ fontSize: "45px" }}>Fresh From Our Studio</h2>
+            <h2>Fresh From Our Studio</h2>
           </div>
-          <div style={{ padding: "10px" }} onClick={ NavigateCatalog }>
+          <div className="see-all-category-desktop" style={{ padding: "10px" }} onClick={NavigateCatalog}>
             <p
               style={{
                 fontWeight: "bold",
@@ -58,18 +59,40 @@ const NewlyAdded = () => {
               Show More Collections
             </p>
           </div>
+          <p
+            onClick={NavigateCatalog}
+            className="see-all-category-mobile"
+            style={{
+              fontWeight: "bold",
+              fontSize: "14px",
+              wordBreak: "keep-all",
+              padding: "10px 20px",
+              border: "1px solid #a0a0a0",
+              cursor: "pointer",
+              borderRadius: "50px",
+            }}
+          >
+            Show More
+          </p>
         </section>
         <section style={{ margin: "25px 0", width: "100%" }}>
-          <div className="w-full gap-3 grid grid-cols-2">
-            <div onClick={()=>NavigateContact(productsWithCategories[0].id)} className="w-full h-full flex flex-col rounded-md gap-3 cursor-pointer">
+          <div className="w-full gap-3 grid grid-cols-1 sm:grid-cols-2">
+            <div
+              onClick={() => NavigateContact(productsWithCategories[0].id)}
+              className="w-full h-full hidden sm:flex flex-col rounded-md gap-3 cursor-pointer"
+            >
               <img
                 className="w-full h-full rounded-md hover:shadow-xl"
                 src={productsWithCategories[0].thumbnail}
                 alt={productsWithCategories[0].slug}
               />
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold" >{productsWithCategories[0].title}</h3>
-                <p className="text-sm text-[#444444]">{productsWithCategories[0].category.name}</p>
+                <h3 className="text-xl font-semibold">
+                  {productsWithCategories[0].title}
+                </h3>
+                <p className="text-sm text-[#444444]">
+                  {productsWithCategories[0].category.name}
+                </p>
               </div>
             </div>
             <div className="w-full h-full">
@@ -78,15 +101,22 @@ const NewlyAdded = () => {
                   return index === 0 ? (
                     <Fragment />
                   ) : (
-                    <div onClick={()=>NavigateContact(product.id)} className="w-full rounded-t-md flex flex-col gap-3 cursor-pointer">
+                    <div
+                      onClick={() => NavigateContact(product.id)}
+                      className="w-full rounded-t-md flex flex-col gap-3 cursor-pointer"
+                    >
                       <img
                         className="w-full h-48 rounded-md hover:shadow-xl"
                         src={product.thumbnail}
                         alt={product.slug}
                       />
                       <div className="flex flex-col gap-1">
-                        <h3 className="text-sm font-semibold">{product.title}</h3>
-                        <p className="text-xs text-[#444444]">{product.category.name}</p>
+                        <h3 className="text-sm font-semibold">
+                          {product.title}
+                        </h3>
+                        <p className="text-xs text-[#444444]">
+                          {product.category.name}
+                        </p>
                       </div>
                     </div>
                   );

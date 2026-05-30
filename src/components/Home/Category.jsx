@@ -1,6 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import { categories } from "../../DB/categories";
 import { useNavigate } from "react-router-dom";
+import "../../styles/category.css"
 
 const Category = () => {
   const Navigate = useNavigate();
@@ -11,7 +12,7 @@ const Category = () => {
 
   return (
     <Fragment>
-      <main style={{ margin: "50px" }}>
+      <main className="category-main">
         <section
           style={{
             display: "flex",
@@ -19,11 +20,11 @@ const Category = () => {
             alignItems: "end",
           }}
         >
-          <div style={{ width: "30%" }}>
+          <div className="heading">
             <p style={{ marginBottom: "10px", color: "#a0a0a0" }}>Category</p>
-            <h2 style={{ fontSize: "45px" }}>Find Your Perfect Piece</h2>
+            <h2>Find Your Perfect Piece</h2>
           </div>
-          <div onClick={()=> {Navigate("/catalog")}} style={{ padding: "10px" }}>
+          <div className="see-all-category-desktop" onClick={()=> {Navigate("/catalog")}} style={{ padding: "10px" }}>
             <p
               style={{
                 fontWeight: "bold",
@@ -37,6 +38,22 @@ const Category = () => {
               See all category
             </p>
           </div>
+
+          <p
+            onClick={()=> {Navigate("/catalog")}}
+            className="see-all-category-mobile"
+            style={{
+              fontWeight: "bold",
+              fontSize: "14px",
+              wordBreak: "keep-all",
+              padding: "10px 20px",
+              border: "1px solid #a0a0a0",
+              cursor: "pointer",
+              borderRadius: "50px",
+            }}
+          >
+            See all
+          </p>
         </section>
         <section style={{ margin: "25px 0", width: "100%" }}>
           <div
@@ -51,16 +68,7 @@ const Category = () => {
               return (
                 <div
                   onClick={()=>NavigateCategory(data.id)}
-                  className="hover:shadow-2xl"
-                  style={{
-                    position: "relative",
-                    borderRadius: "5px",
-                    height: "175px",
-                    flexGrow: "1",
-                    flexBasis: "24%",
-                    maxWidth: "24%",
-                    marginTop: "15px",
-                  }}
+                  className="hover:shadow-2xl list"
                 >
                   <img
                     style={{ width: "100%", borderRadius: "5px", height: "100%" }}
