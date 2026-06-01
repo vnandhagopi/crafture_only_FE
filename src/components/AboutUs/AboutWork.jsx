@@ -17,8 +17,8 @@ const AboutWork = () => {
         }}
       >
         <section
+          className="w-full sm:w-[50%]"
           style={{
-            width: "50%",
             display: "flex",
             flexDirection: "column",
             gap: "25px",

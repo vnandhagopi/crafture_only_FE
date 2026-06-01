@@ -10,7 +10,7 @@ const AboutHeaders = () => {
             [Home / <span>About]</span>
           </h3>
           <h2>Crafting Excellence Together</h2>
-          <p>
+          <p className="text-justify sm:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             quaerat, eos sequi maxime voluptates dicta eum repellat expedita
             quibusdam veniam maiores? Consequatur, hic? Labore voluptatem fugit
@@ -24,18 +24,19 @@ const AboutHeaders = () => {
           style={{
             position: "relative",
           }}
-          className="about-headers_card-2"
+          className="about-headers_card-2 h-[400px]"
         >
           <img
             style={{
-              width: "400px",
-              height: "400px",
+              width: "100%",
+              height: "100%",
               borderRadius: "25px",
             }}
             src={coverAbout}
             alt="poster"
           ></img>
           <div
+            className="hidden sm:flex"
             style={{
               position: "absolute",
               backgroundColor: "white",
@@ -44,7 +45,6 @@ const AboutHeaders = () => {
               height: "150px",
               left: "-50px",
               bottom: "-50px",
-              display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}

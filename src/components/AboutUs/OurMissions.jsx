@@ -12,23 +12,22 @@ const OurMissions = () => {
   return (
     <Fragment>
       <main
+        className="flex-wrap-reverse sm:flex-wrap gap-10 sm:gap-[150px] my-14 sm:my-[100px]"
         style={{
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
-          gap: "50px",
-          margin: "50px 0",
         }}
       >
-        <section style={{ width: "50%" }}>
-          <div style={{ position: "relative" }}>
+        <section style={{ width: "300px", height: "500px", flexGrow: "1" }}>
+          <div style={{ position: "relative", width: "100%", height: "100%"}}>
             <img
-              style={{ height: "400px", width: "400px", borderRadius: "15px" }}
+              style={{ height: "100%", width: "100%", borderRadius: "15px" }}
               src={outer}
               alt="missions"
             />
 
-            <div style={{ backgroundColor: "white", position: "absolute", bottom: "25%", right: "60px", padding: "10px", borderRadius: "25px"}}>
+            <div className="hidden sm:block" style={{ backgroundColor: "white", position: "absolute", bottom: "30%", right: "-15%", padding: "10px", borderRadius: "25px"}}>
               <img
                 style={{ height: "175px", width: "150px", borderRadius: "15px" }}
                 src={inner}
@@ -39,13 +38,14 @@ const OurMissions = () => {
         </section>
         <section
           style={{
-            width: "50%",
+            width: "300px",
             display: "flex",
+            flexGrow: "1",
             flexDirection: "column",
             gap: "25px",
           }}
         >
-          <h1 className="text-4xl font-semibold">Our Mission</h1>
+          <h1 className="text-2xl sm:text-4xl font-semibold">Our Mission</h1>
           <p style={{ color: "rgb(55, 55, 55)", fontSize: "16px" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad unde at
             doloremque a vel incidunt nulla minima eaque quidem. Rerum laborum

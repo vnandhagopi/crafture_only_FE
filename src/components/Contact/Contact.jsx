@@ -118,17 +118,18 @@ const Products = () => {
   return (
     <Fragment>
       <Navbar activePath={{ path: "/contactus" }} />
-      <main style={{ margin: "50px 100px" }}>
-        <section style={{ display: "flex", width: "100%", gap: "10%" }}>
+      <main className="mx-[20px] sm:mx-[100px] my-[20px] sm:my-[100px]">
+        <section className="flex-wrap-reverse lg:flex-wrap" style={{ display: "flex", width: "100%", gap: "50px" }}>
           <div
             style={{
-              width: "50%",
+              flexBasis: "400px",
+              flexGrow: "1",
               display: "flex",
               flexDirection: "column",
               gap: "25px",
             }}
           >
-            <h1 style={{ fontWeight: "lighter", fontSize: "48px" }}>
+            <h1 className="text-[40px] lg:text-[48px]" style={{ fontWeight: "lighter" }}>
               Get in Touch with our Artisans
             </h1>
             <p style={{ color: "#444444" }}>
@@ -374,7 +375,7 @@ const Products = () => {
               </div>
             </form>
           </div>
-          <div style={{ width: "50%", position: "relative" }}>
+          <div style={{ flexBasis: "400px", flexGrow: "1", position: "relative" }}>
             <img
               style={{ width: "100%", height: "100%", borderRadius: "10px" }}
               src={banner}
@@ -406,12 +407,11 @@ const Products = () => {
               </p>
             </div>
             <div
+              className="w-24 h-24 md:h-[125px] md:w-[125px]"
               style={{
                 position: "absolute",
                 top: "5%",
                 left: "10%",
-                width: "125px",
-                height: "125px",
                 backgroundColor: "#FEC24E",
                 borderRadius: "50%",
                 display: "flex",

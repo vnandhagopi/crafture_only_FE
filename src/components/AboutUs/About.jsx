@@ -25,11 +25,7 @@ const About = () => {
           alignItems: "center",
         }}
       >
-        <section
-          style={{
-            width: "75%",
-          }}
-        >
+        <section className="w-[90%] sm:w-[75%]">
           <AboutHeaders />
           <AboutNumerics subTitle={false} title={false} />
           <OurMissions />

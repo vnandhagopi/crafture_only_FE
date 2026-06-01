@@ -91,6 +91,7 @@ const Products = () => {
                   currentCategory === "all"
                     ? "1px solid black"
                     : "",
+                fontWeight: currentCategory === "all" ? "bold" : "",
                 padding: "10px",
                 borderRadius: "50px",
               }}
@@ -108,6 +109,7 @@ const Products = () => {
                       currentCategory === data.id
                         ? "1px solid black"
                         : "",
+                    fontWeight: currentCategory === data.id ? "bold" : "",
                     padding: "10px",
                     borderRadius: "50px",
                   }}

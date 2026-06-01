@@ -12,23 +12,23 @@ const OurVisions = () => {
   return (
     <Fragment>
       <main
+        className="flex-wrap sm:gap-[150px] gap-10 my-16 sm:my-[100px]"
         style={{
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
-          gap: "50px",
-          margin: "100px 0",
         }}
       >
         <section
           style={{
-            width: "50%",
+            width: "300px",
             display: "flex",
+            flexGrow: "1",
             flexDirection: "column",
             gap: "25px",
           }}
         >
-          <h1 className="text-4xl font-semibold">Our Vision</h1>
+          <h1 className="text-2xl sm:text-4xl font-semibold">Our Vision</h1>
           <p style={{ color: "rgb(55, 55, 55)", fontSize: "16px" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad unde at
             doloremque a vel incidunt nulla minima eaque quidem. Rerum laborum
@@ -67,21 +67,27 @@ const OurVisions = () => {
         </section>
 
         <section
-          style={{ width: "50%", display: "flex", justifyContent: "end" }}
+          style={{
+            width: "300px",
+            display: "flex",
+            flexGrow: "1",
+            justifyContent: "end",
+          }}
         >
-          <div style={{ position: "relative" }}>
+          <div style={{ position: "relative", width: "100%" }}>
             <img
-              style={{ height: "400px", width: "400px", borderRadius: "15px" }}
+              style={{ height: "500px", width: "100%", borderRadius: "15px" }}
               src={outer}
               alt="missions"
             />
 
             <div
+              className="hidden sm:block"
               style={{
                 backgroundColor: "white",
                 position: "absolute",
-                bottom: "25%",
-                left: "-60px",
+                bottom: "30%",
+                left: "-15%",
                 padding: "10px",
                 borderRadius: "25px",
               }}
